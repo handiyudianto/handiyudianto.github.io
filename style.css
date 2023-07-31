@@ -110,21 +110,20 @@ body{
     margin-top: 30px;
 }
 
-.weather-details .humidity, .weather-details .wind{
+.weather-details .humidity, .weather-details .wind, .weather-details .country{
     display: flex;
     align-items: center;
+    margin-right: 1rem;
     width: 50%;
     height: 100px;
 }
 
 .weather-details .humidity{
     padding-left: 20px;
-    justify-content: flex-start;
 }
 
 .weather-details .wind{
     padding-right: 20px;
-    justify-content: flex-end;
 }
 
 .weather-details i{

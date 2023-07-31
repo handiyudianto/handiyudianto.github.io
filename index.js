@@ -28,6 +28,8 @@ search.addEventListener('click', ()=>{
     const description = document.querySelector('.weather-box .description');
     const humidity = document.querySelector('.weather-details .humidity span');
     const wind = document.querySelector('.weather-details .wind span');
+    const country = document.querySelector('.country .country-img span');
+    const countryDetails = document.querySelector('.country .country-details span');
 
     switch (json.weather[0].main){
         case 'Clear':
@@ -54,6 +56,7 @@ search.addEventListener('click', ()=>{
     description.innerHTML = `${json.weather[0].description}`;
     humidity.innerHTML = `${json.main.humidity}%`;
     wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+    country.innerHTML = `<img src="https://flagsapi.com/${json.sys.country}/shiny/64.png">`
 
     weatherBox.style.display = '';
     weatherDetails.style.display = '';
